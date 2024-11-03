@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav a.active {
+  color: #eee;
+  background-color: #1c1c1c;
+  padding: 0.6em 1.25em;
+  border-radius: 0.3em;
+}
