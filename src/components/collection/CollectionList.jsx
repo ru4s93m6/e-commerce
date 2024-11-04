@@ -11,7 +11,6 @@ export default function CollectionList() {
       ? collections
       : collections.filter((collection) => collection.category === category);
 
-  console.log(collections);
   function handleSetCategory(type) {
     setCategory(type);
   }

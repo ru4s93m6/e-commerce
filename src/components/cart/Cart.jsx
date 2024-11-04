@@ -1,12 +1,26 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import CartItem from "./CartItem";
+import { useEffect } from "react";
+import { initializeCart } from "../../features/cartSlice";
+
 export default function Cart() {
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
   const totalPrice = cart.reduce(
     (total, item) => item.price * item.quantity + total,
     0,
   );
+  useEffect(
+    function () {
+      const data = JSON.parse(localStorage.getItem("cart"));
+      if (data) {
+        dispatch(initializeCart(data));
+      }
+    },
+    [dispatch],
+  );
+
   // If there is no item in the cart yet
   if (cart.length === 0)
     return (
