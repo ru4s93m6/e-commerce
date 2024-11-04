@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { useInitializeCart } from "../features/useInitializeCart";
 
 export default function Navbar() {
+  useInitializeCart();
   const cart = useSelector((state) => state.cart.cart);
   const totalItemQuantity = cart.reduce(
     (total, item) => total + item.quantity,
