@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useLoaderData } from "react-router-dom";
 import { addItem } from "../../features/cartSlice";
 import toast from "react-hot-toast";
+import ImageMagnifier from "../ImageMagnifier";
 
 export default function ItemInfo() {
   const item = useLoaderData();
@@ -32,11 +33,15 @@ export default function ItemInfo() {
       <div className="sm:w-1/2">
         {/* Image Area */}
         <section>
-          <figure className="sm:w-1/2">
-            <img
+          <figure className="min-w-72 sm:w-1/2">
+            <ImageMagnifier
               src={item.image}
+              width={300}
+              height={200}
+              magnifierHeight={120}
+              magnifierWidth={120}
+              zoomLevel={2}
               alt={item.title}
-              className="h-full w-full object-contain"
             />
           </figure>
         </section>
