@@ -1,8 +1,17 @@
-# React + Vite
+# React E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page application (SPA) built with React, Vite, and Tailwind CSS, showcasing a curated collection of fashion pieces.
+It's a mockup e-commerce page, demonstrating modern web design and UI implementation without actual checkout functionality.
+[LIVE SITE DEMO:](https://e-commerce-mockup.netlify.app/)
 
-Currently, two official plugins are available:
+## Skills used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Vite
+- Tailwind CSS
+- React Router DOM
+- redux
+
+## Acknowledges
+
+- [The Odin Project](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart) for the project idea and guidance
